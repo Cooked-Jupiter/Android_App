@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public void newDeer(View view)
+    {
+        Deer red = new Deer();
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
