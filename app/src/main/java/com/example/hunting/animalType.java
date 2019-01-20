@@ -45,4 +45,25 @@ public class animalType {
         this.totalRightSize = totalRightSize;
     }
 
+    public int getLeftAntlerAmount()
+    {
+        return leftAntlerAmount;
+    }
+    public int getRightAntlerAmount( )
+    {
+        return rightAntlerAmount;
+    }
+    public double getTotalSize()
+    {
+        return totalSize;
+    }
+    public double getTotalLeftSize()
+    {
+        return totalLeftSize;
+    }
+    public double getTotalRightSize()
+    {
+        return totalRightSize;
+    }
+
 }

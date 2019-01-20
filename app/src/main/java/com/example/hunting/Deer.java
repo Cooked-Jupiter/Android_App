@@ -20,4 +20,9 @@ public class Deer extends animalType {
     {
         this.deerType = type;
     }
+
+    public void setLeftAntlerAmount(int leftAntlerAmount)
+    {
+        this.leftAntlerAmount = leftAntlerAmount;
+    }
 }
