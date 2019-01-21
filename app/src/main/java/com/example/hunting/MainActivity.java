@@ -1,5 +1,6 @@
 package com.example.hunting;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,46 +17,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        Button addButton = (Button) findViewById(R.id.addButton);
-        addButton.setOnClickListener(new View.OnClickListener(){
+        Button secondActivityBtn = (Button) findViewById(R.id.secondActivityBtn);
+        secondActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Deer coues = new Deer();
-                EditText firsNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-                EditText secondEditText = (EditText) findViewById(R.id.secondEditText);
-                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
-
-                coues.setLeftAntlerAmount(Integer.parseInt(firsNumEditText.getText().toString()));
-                coues.setRightAntlerAmount(Integer.parseInt(secondEditText.getText().toString()));
-                int total = coues.getLeftAntlerAmount() + coues.getRightAntlerAmount();
-                coues.setTotalSize(total);
-                resultTextView.setText("The deer has this many antlers" + coues.getTotalSize() + "");
+            public void onClick(View v{
+                Intent startIntent = new Intent(getApplicationContext(), Activity_2.class);
+                startActivity(startIntent);
             }
         });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
